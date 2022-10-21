@@ -3245,17 +3245,3 @@ function DiscordLib:Window(text)
 	return ServerHold
 end
 return DiscordLib
-game:GetService("UserInputService").InputBegan:Connect(function(kuy)
-    if kuy.KeyCode == Enum.KeyCode.RightControl and kuy then
-        if game:GetService("CoreGui").Discord.MainFrame.Visible == false then
-            game:GetService("CoreGui").Discord.MainFrame.Visible = true
-        elseif game:GetService("CoreGui").Discord.MainFrame.Visible == true then
-            game:GetService("CoreGui").Discord.MainFrame.Visible = false
-        end
-    end
-end)
-for i,v in pairs(game:GetService("CoreGui"):GetChildren()) do
-    if v.Name == "Discord" then
-        v:Destroy()
-    end
-end
